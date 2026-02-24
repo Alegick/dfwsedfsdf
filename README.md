@@ -9,7 +9,7 @@
 docker version
 ```
 
-![Скрин версии Docker](1.png)
+![Скрин версии Docker](/img/1.png)
 
 > Готовые образы берутся из сторонних источников: **Docker Hub** или другие
 
@@ -42,7 +42,7 @@ docker container prune $(docker ps -q)
 docker ps -a
 ```
 
-![Тут нужен скриншот вывода](2.png)
+![Тут нужен скриншот вывода](/img/2.png)
 
 - Опционально можно удалить ненужные образы. Показать текущие образы:
 ```shell
@@ -71,7 +71,7 @@ docker rmi $(docker images -q)
 docker search nginx
 ```
 
-![Скрин вывода поиска по слову nginx](3.png)
+![Скрин вывода поиска по слову nginx](/img/3.png)
 
 Получить, создать и запустить Nginx
 ```shell
@@ -83,7 +83,7 @@ docker run -d --name my-nginx -p 80:80 nginx
 docker ps -a
 ```
 
-![Тут нужен скриншот](4.png)
+![Тут нужен скриншот](/img/4.png)
 
 Показать загруженный на ваш компьютер образ
 ```shell
@@ -118,7 +118,7 @@ docker restart 2e6c42d9b6af
 docker rm my-nginx
 ```
 
-![Тут нужен скриншот вывода](5.png)
+![Тут нужен скриншот вывода](/img/5.png)
 
 И можно удалить ещё и образ загруженного ранее Nginx:
 
@@ -132,7 +132,7 @@ docker images
 docker rmi 062a783918fb
 ```
 
-![Скрин состояния docker images](6.png)
+![Скрин состояния docker images](/img/6.png)
 
 ### Проверить работу контейнера
 
@@ -146,7 +146,7 @@ docker run -d --name my-nginx -p 80:80 nginx
 docker images
 ```
 
-![Скрин образа](7.png)
+![Скрин образа](/img/7.png)
 
 Показать только запущенные контейнеры
 ```shell
@@ -156,7 +156,7 @@ docker ps
 ```shell
 docker ps -a
 ```
-![Скрин контейнера](8.png)
+![Скрин контейнера](/img/8.png)
 
 > Из одного образа можно получить несколько контейнеров!
 
@@ -167,11 +167,11 @@ docker ps -a
 curl http://localhost/
 ```
 
-![Скрин вывода curl](9.png)
+![Скрин вывода curl](/img/9.png)
 
 Способ 2 - [открыть http://localhost/ адрес в браузере](http://localhost/)
 
-![Скрин nginx в браузере](10.png)
+![Скрин nginx в браузере](/img/10.png)
 
 ### Управление контейнером
 
@@ -192,7 +192,7 @@ docker inspect my-nginx
 docker stats
 ```
 
-![](11.png)
+![](/img/11.png)
 
 
 > Выйти из мониторинга контейнеров можно по `Ctrl+C`
@@ -208,7 +208,7 @@ docker logs -f my-nginx
 ```
 > Выйти из логов в режиме ожидания можно по `Ctrl+C`
 
-![](12.png)
+![](/img/12.png)
 
 ### Управление контейнером
 
@@ -249,13 +249,13 @@ docker exec -it my-nginx sh
 ```shell
 uname -a
 ```
-![](13.png)
+![](/img/13.png)
 
 Получить больше информации об ОС контейнера
 ```shell
 cat /etc/os-release
 ```
-![](14.png)
+![](/img/14.png)
 
 Установить **Fastfetch**
 ```shell
@@ -266,7 +266,7 @@ apt update && apt install -y fastfetch
 ```shell
 fastfetch
 ```
-![Вывод команды fastfetch](15.png)
+![Вывод команды fastfetch](/img/15.png)
 
 Можно установить ещё несколько приложений внутри Docker-контейнера:
 ```shell
@@ -279,7 +279,7 @@ apt update && apt install -y fastfetch htop cmatrix hollywood mc micro
 htop
 ```
 
-![Скрин вывода htop](16.png)
+![Скрин вывода htop](/img/16.png)
 
 > Выйти из `htop` можно по **Q**
 
@@ -287,14 +287,14 @@ htop
 cmatrix
 ```
 
-![Скрин вывода cmatrix](17.png)
+![Скрин вывода cmatrix](/img/17.png)
 
 > Выйти из `cmatrix` можно по **Q**
 
 ```shell
 hollywood
 ```
-![Скрин вывода hollywood](18.png)
+![Скрин вывода hollywood](/img/18.png)
 
 > Выйти из `hollywood` можно по `Ctrl-C`
 
